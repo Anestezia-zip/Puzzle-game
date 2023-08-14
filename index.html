@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-
     <header class="header">
-        <img width="60" src="./img/logo.jpg" alt="logo" class="logo">
+        <div class="logo-block">
+            <img width="60" src="./img/logo.jpg" alt="logo" class="logo">
+            <h1>Puzzle Haven</h1>
+        </div>
         <nav>
             <a class="link" href="#">Puzzles</a>
             <a href="#">Levels</a>  
@@ -19,7 +21,12 @@
         </nav>
     </header>
     <main>
-        <h1 class="main-title">Puzzle Haven</h1>
+        <div class="timer-clock"><span class="min">01</span>:<span class="sec">00</span></div>
+        <div class="buttons">
+            <button type="button" class="btn start">Start game!</button>
+            <button type="button" class="btn check" disabled>Check result</button>
+            <button type="button" class="btn new-game">New game</button>
+        </div>
     </main>
     <footer></footer>
 
