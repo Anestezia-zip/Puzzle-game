@@ -95,3 +95,39 @@ main {
 .check {
     opacity: 0.6;
 }
+
+/* ----------------- The Game ----------------- */
+
+.container{
+    width: 55%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.number-box,
+.number-box2 {
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 3px 10px 6px rgb(0 0 0 / 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.number-box2 {
+    background: cornsilk;
+}
+
+.number{
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* background-image: url(./img/cat.jpg); */
+    color: white;
+} 
