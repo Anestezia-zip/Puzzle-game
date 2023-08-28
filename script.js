@@ -5,22 +5,23 @@ Puzzle()
 let countdown;
 $('.start').on('click', function() {
     allowDragging = true;
-    let countDownDate = new Date().getTime() + (60 * 1000); // Setting the countdown time to 1 minute
+    let countDownDate = new Date().getTime() + 2* 60 * 1000; // Setting the countdown time to 1 minute
     countdown = setInterval(function startTimer() {
       let now = new Date().getTime();
-      let distance = countDownDate - now;
-      let seconds = Math.floor((distance % (1000 * 60)) / 1000); // number of seconds remaining
-
-      if (seconds < 10) $(".timer-clock").text("00" + ':' + '0' + seconds);
-      else $(".timer-clock").text("00" + ":" + seconds);
+      let timeLeft = countDownDate - now;
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000); // number of seconds remaining
+      const formattedTime = (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+      $(".timer-clock").text(formattedTime);
 
       $('.start').prop("disabled", true).css("opacity", "0.7");
       $('.check').prop("disabled", false).css("opacity", "1");
 
-      if (distance < 0) { // коли відлік закінчиться
+      if (timeLeft < 0) { // коли відлік закінчиться
         clearInterval(countdown);
         $(".timer-clock").text("Time's up!");
         $("#start-btn").prop("disabled", false);
+        $("#check-btn").prop("disabled", true);
       }
       Puzzle();
     })
