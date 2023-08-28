@@ -21,11 +21,12 @@ body{
     top: 0;
     width: 100%;
     height: 62px;
-    background-color: #DCFAED;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgb(199, 199, 199);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .header a {
@@ -60,7 +61,6 @@ body{
 /* ----------------- Main ----------------- */
 
 main {
-    background-color: #eeebf8;
     height: 91.9vh;
     width: 100%;
     margin-top: 60px;
@@ -71,8 +71,12 @@ main {
 .timer-clock {
     font-size: 70px;
     margin-bottom: 16px;
-    margin-top: 10px;
+    margin-top: 30px;
     text-align: center;
+}
+
+.small-timer {
+    font-size: 20px;
 }
 
 /* ----------------- Buttons ----------------- */
@@ -83,10 +87,9 @@ main {
 
 .btn {
     padding: 8px 15px;
-    margin: 10px 30px;
-    background-color: #fff;
-    color: #36747f;
-    font-weight: bold;
+    margin: 30px;
+    background-color: #e16666;
+    color: white;
     border-radius: 5px;
     border: none;
     font-size: 18px;
@@ -128,6 +131,12 @@ main {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    /* background-image: url(./img/cat.jpg); */
+    background-image: url(./img/cat.jpg);
     color: white;
 } 
+
+.droppable {
+    height: 75px;
+    width: 75px;
+    box-sizing: border-box;
+}
