@@ -21,12 +21,34 @@
             <a href="#">Help</a>
         </nav>
     </header>
-    <main>
+
         <div class="timer-clock">02:00</div>
         <div class="buttons">
             <button type="button" class="btn start">Start game!</button>
             <button type="button" class="btn check" disabled>Check result</button>
             <button type="button" class="btn new-game">New game</button>
+        </div>
+
+        <div class="question-window">
+            <hr>
+            <h2 class="window-title">You still have time, you sure?<span class="timer-clock small-timer"></span></h2>
+            <hr>
+            <button class="close-btn" type="button">Close</button>
+            <button class="check-btn" type="button">Check</button>
+        </div>
+    
+        <div class="success-window">
+            <hr>
+            <h2 class="window-title">Woohoo, well done, you did it!</h2>
+            <hr>
+            <button class="close-btn" type="button">Close</button>
+        </div>
+    
+        <div class="loose-window">
+            <hr>
+            <h2 class="window-title">It's a pity, but you lost</h2>
+            <hr>
+            <button class="close-btn" type="button">Close</button>
         </div>
 
         <div class="container">
@@ -114,7 +136,6 @@
                 </div>
             </div>
         </div>
-    </main>
     <footer></footer>
 
 
