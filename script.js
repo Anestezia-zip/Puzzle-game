@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 shufflePictures()
 Puzzle()
 
@@ -20,6 +22,19 @@ $('.close-btn').on('click', function(){
         animation: 'none',
     })
     $('body').css('animation', 'none')
+});
+
+// Event listener for the 'New game' button
+$(".new-game").on("click", function() {
+    location.reload();
+});
+
+// Сhecking for a well-folded puzzle
+$('.check-btn').on('click', function(){
+    clearInterval(countdown);
+    checkPuzzle();
+    $('.start').prop("disabled", true).css("opacity", "0.7");
+    $('.check').prop("disabled", true).css("opacity", "0.7");
 });
 
 // ---------------------------- Functions ----------------------------
@@ -55,8 +70,36 @@ function Puzzle() {
                 left: 0,
                 position: 'relative'
             }).appendTo(droppedOn);
-        },
+        }
     });
+
+    // Add touch event processing separately
+    $('.number').on('touchstart', function (event) {
+        if (!allowDragging) {
+            return false;
+        }
+        if ($(this).hasClass('dropped-puzzle')) {
+            $(this).removeClass('dropped-puzzle');
+            $(this).parent().removeClass('puzzle-present');
+        }
+        // Save the coordinates of the touch
+        let touch = event.originalEvent.touches[0] || event.originalEvent.changedTouches[0];
+        $(this).data('touch-start-x', touch.pageX);
+        $(this).data('touch-start-y', touch.pageY);
+    }).on('touchmove', function (event) {
+        event.preventDefault();
+        let touch = event.originalEvent.touches[0] || event.originalEvent.changedTouches[0];
+        let startX = $(this).data('touch-start-x');
+        let startY = $(this).data('touch-start-y');
+        let offsetX = touch.pageX - startX;
+        let offsetY = touch.pageY - startY;
+        $(this).css({
+            top: offsetY + 'px',
+            left: offsetX + 'px',
+            position: 'relative'
+        });
+    })
+        
 }
 
 // Function for the timer and start of the game
@@ -94,11 +137,80 @@ function shufflePictures() {
         });
 } 
 
+// Function for checking the puzzle
+let winnerImage = ['0% 0%', '-100% 0%', '-200% 0%', '-300% 0%', '0% -100%', '-100% -100%', '-200% -100%', '-300% -100%', '0% -200%', '-100% -200%', '-200% -200%', '-300% -200%', '0% -300%', '-100% -300%', '-200% -300%', '-300% -300%'];
+function checkPuzzle() {
+    if ($('#droparea .dropped-puzzle').length != 16) {
+        looseWindow();
+        return false;
+    } 
+    for (let i = 0; i < 16; i++) {
+        let item = $(`#droparea .dropped-puzzle:eq(${i})`).css('background-position');
+        let order = winnerImage[i];
+        if (item != order) {
+            looseWindow();
+            return false;
+        } 
+        successWindow();
+        return true;
+    };
+};
+
+function looseWindow() {
+    $('.loose-window').css({
+        display: 'block',
+        animation: '0.5s forwards fadeInDown',
+    })
+    $('.question-window').css({
+        display: 'none',
+    })
+    $('.close-btn').on('click', function(){
+        $('.loose-window').css({
+            display: 'none',
+        })
+    });
+}
+
+function successWindow() {
+    $('.success-window').css({
+        display: 'block',
+        animation: '0.5s forwards fadeInDown',
+    })
+    $('.question-window').css({
+        display: 'none',
+    })
+    $('.close-btn').on('click', function(){
+        $('.success-window').css({
+            display: 'none',
+        })
+    });
+}
+
+// ---------------------------- Dropdown ----------------------------
+
+
+function closeDropdowns() {
+    $(".dropdown-content").removeClass("show");
+}
+
+$(".dropbtn").click(function() {
+    $("#myDropdown").toggleClass("show");
+});
+
+$(document).click(function(event) {
+    if (!$(event.target).closest('.dropdown').length) {
+      closeDropdowns();
+    }
+});
 
 
 
 
 
+
+
+
+});
 
 
 

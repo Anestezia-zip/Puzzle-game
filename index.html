@@ -20,8 +20,17 @@
             <a href="#">Settings</a>
             <a href="#">Help</a>
         </nav>
+        <div class="dropdown">
+            <button class="dropbtn"><i class="fa-solid fa-bars"></i></button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">Puzzles</a>
+              <a href="#">Levels</a>
+              <a href="#">Settings</a>
+              <a href="#">Help</a>
+            </div>
+        </div>
     </header>
-
+    <main>
         <div class="timer-clock">02:00</div>
         <div class="buttons">
             <button type="button" class="btn start">Start game!</button>
@@ -36,14 +45,12 @@
             <button class="close-btn" type="button">Close</button>
             <button class="check-btn" type="button">Check</button>
         </div>
-    
         <div class="success-window">
             <hr>
             <h2 class="window-title">Woohoo, well done, you did it!</h2>
             <hr>
             <button class="close-btn" type="button">Close</button>
         </div>
-    
         <div class="loose-window">
             <hr>
             <h2 class="window-title">It's a pity, but you lost</h2>
@@ -136,11 +143,17 @@
                 </div>
             </div>
         </div>
-    <footer></footer>
+    </main>
+    <footer>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-telegram"></i>
+    </footer>
 
-
+    <script src="https://kit.fontawesome.com/1def89b5ad.js" crossorigin="anonymous"></script>
     <script src="./jquery-3.6.3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
     <script src="./script.js"></script>
 </body>
 
