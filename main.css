@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 main{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
@@ -12,7 +18,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1;
+    flex: 1 0 auto;
 }
 
 /* ----------------- Header, footer & logo ----------------- */
