@@ -312,8 +312,15 @@ footer {
         margin: 10px;
     }
 
+    .question-window,
+    .success-window,
+    .loose-window {
+        width: 350px;
+        top: 120px;
+    }
+
     footer {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
