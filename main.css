@@ -335,3 +335,11 @@ footer {
         margin-top: 50px;
     }
 }
+
+@media screen and (max-width: 360px) {
+    
+
+    .container {
+        width: 300px;
+    }
+}
