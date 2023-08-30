@@ -158,6 +158,10 @@ footer {
     box-sizing: border-box;
 }
 
+table {
+    border-collapse: collapse;
+}
+
 /* ----------------- Pop-up windows ----------------- */
 
 .question-window,
@@ -337,8 +341,6 @@ footer {
 }
 
 @media screen and (max-width: 360px) {
-    
-
     .container {
         width: 300px;
     }
