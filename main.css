@@ -82,6 +82,10 @@ footer {
     font-size: 24px;
 }
 
+footer i {
+    cursor: pointer;
+}
+
 /* ----------------- Timer ----------------- */
 
 .timer-clock {
