@@ -44,7 +44,7 @@ $('.check').on('click', promptForCheck)
 $('.close-btn').on('click', promptForClose)
 $('.check-btn').on('click', onCheckPuzzle)
 $(".new-game").on("click", () => {
-    location.reload
+    location.reload()
 });
 
 // ---------------------------- Functions ----------------------------
@@ -152,12 +152,12 @@ $(".new-game").on("click", () => {
     // Function for checking the puzzle
     let winnerImage = ['0% 0%', '-100% 0%', '-200% 0%', '-300% 0%', '0% -100%', '-100% -100%', '-200% -100%', '-300% -100%', '0% -200%', '-100% -200%', '-200% -200%', '-300% -200%', '0% -300%', '-100% -300%', '-200% -300%', '-300% -300%'];
     function checkPuzzle() {
-        if ($('#droparea .dropped-puzzle').length != 16) {
+        if ($('#gamefield .dropped-puzzle').length != 16) {
             looseWindow();
             return false;
         } 
         for (let i = 0; i < 16; i++) {
-            let item = $(`#droparea .dropped-puzzle:eq(${i})`).css('background-position');
+            let item = $(`#gamefield .dropped-puzzle:eq(${i})`).css('background-position');
             let order = winnerImage[i];
             if (item != order) {
                 looseWindow();
