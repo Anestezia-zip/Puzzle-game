@@ -63,7 +63,7 @@ It is important to close attention to user interactions to guarantee a user-frie
 
 ### Validator Testing 
 - HTML
-  - No errors were returned when passing through the official [W3C HTML validator]()
+  - No errors were returned when passing through the official [W3C HTML validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fanestezia-zip.github.io%2FPuzzle-game%2F)
 - CSS
   - No errors were found when passing through the official [W3C CSS validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fanestezia-zip.github.io%2FPuzzle-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - Javascript

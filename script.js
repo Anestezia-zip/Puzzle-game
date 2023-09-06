@@ -1,39 +1,49 @@
-$(document).ready(function() {
+let onStartApp = function() {
 
     shufflePictures();
     Puzzle();
 
 // -------------------------- Pop-up windows --------------------------
 
-    // a question box asking if you really want to check the puzzle
-    $('.check').on('click', function(){
+/**
+ * A question box asking if you really want to check the puzzle
+ */
+
+    function promptForCheck(){
         $('.question-window').css({
             display: 'block',
             animation: '0.5s forwards fadeInDown',
         });
         $('body').css('animation', '1s forwards bgAppear');
-    });
+    }
+/**
+ * Close the question box
+ */
 
-    // close the question box
-    $('.close-btn').on('click', function(){
+    function promptForClose(){
         $('.question-window').css({
             display: 'none',
             animation: 'none',
         });
         $('body').css('animation', 'none');
-    });
+    };
+/**
+ * Сhecking for a well-folded puzzle
+ */
 
-    // Event listener for the 'New game' button
-    $(".new-game").on("click", function() {
-        location.reload();
-    });
-
-    // Сhecking for a well-folded puzzle
-    $('.check-btn').on('click', function() {
-        clearInterval(countdown);
+    function onCheckPuzzle() {
+        clearInterval(countdownInterval);
         checkPuzzle();
         $('.start, .check').prop("disabled", true).css("opacity", "0.7");
-    });
+    };
+/**
+ * Event listeners for the pop-up windows
+ */
+
+$('.check').on('click', promptForCheck)
+$('.close-btn').on('click', promptForClose)
+$('.check-btn').on('click', onCheckPuzzle)
+$(".new-game").on("click", location.reload);
 
 // ---------------------------- Functions ----------------------------
 
@@ -100,30 +110,32 @@ $(document).ready(function() {
             
     }
 
-    // Function for the timer and start of the game
-    let countdown;
+
+    let countdownTime = 120;
+    let countdownInterval;
+    function startTimer() {
+        countdownInterval = setInterval(function() {
+            if (countdownTime <= 0) {
+                clearInterval(countdownInterval);
+                $(".timer-clock").text("Time's up!");
+                $(".start").prop("disabled", true).css("opacity", ".7");
+                $(".check").prop("disabled", true).css("opacity", ".7");
+            } else {
+                const minutes = Math.floor(countdownTime / 60);
+                const seconds = countdownTime % 60;
+                const formattedTime = (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+                $(".timer-clock").text(formattedTime);
+                countdownTime--;
+                $('.start').prop("disabled", true).css("opacity", ".7");
+                $('.check').prop("disabled", false).css("opacity", "1");
+            }
+        }, 1000);
+    }
+
     $('.start').on('click', function() {
+        startTimer()
         allowDragging = true;
-        let countDownDate = new Date().getTime() + 2* 60 * 1000; // Setting the countdown time to 1 minute
-        countdown = setInterval(function startTimer() {
-        let now = new Date().getTime();
-        let timeLeft = countDownDate - now;
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000); // number of seconds remaining
-        const formattedTime = (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
-        $(".timer-clock").text(formattedTime);
-
-        $('.start').prop("disabled", true).css("opacity", ".7");
-        $('.check').prop("disabled", false).css("opacity", "1");
-
-        if (timeLeft < 0) { // коли відлік закінчиться
-            clearInterval(countdown);
-            $(".timer-clock").text("Time's up!");
-            $(".start").prop("disabled", true).css("opacity", ".7");
-            $(".check").prop("disabled", true).css("opacity", ".7");
-        }
-        Puzzle();
-        });
+        Puzzle()
     });
 
     // Function for shuffling picture positions
@@ -199,21 +211,9 @@ $(document).ready(function() {
         }
     });
 
-});
+};
 
+$(document).ready(() => {
+    onStartApp()
+})
 
-
-
-
-
-
-
-
-
-
-
-// document.getElementById('answer-box').addEventListener('keydown', function(event) {
-//     if (event.key === 'Enter') {
-//         checkSmth()
-//     }
-// })
