@@ -90,4 +90,3 @@ As well as on mobile devices:
 ## Credits 
 
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-- A dropdown toggleable menu is from this open Source site [w3schools.com](https://www.w3schools.com/howto/howto_js_dropdown.asp)

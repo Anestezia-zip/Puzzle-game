@@ -119,8 +119,7 @@ footer i {
 
 .feedback-radio-btns {
     display: flex;
-    flex-direction: column;
-    gap: 6px;
+    gap: 20px;
 }
 
 .send-message-btn {
