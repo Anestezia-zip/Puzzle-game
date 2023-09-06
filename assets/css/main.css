@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +10,7 @@ body {
     flex-direction: column;
 }
 
-main{
+main {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     display: flex;
@@ -148,7 +147,7 @@ footer i {
 
 /* ----------------- Buttons ----------------- */
 
-.buttons{
+.buttons {
     text-align: center;
 }
 
@@ -169,7 +168,7 @@ footer i {
 
 /* ----------------- The Game ----------------- */
 
-.container{
+.container {
     width: 55%;
     height: 50%;
     display: flex;
@@ -193,7 +192,7 @@ footer i {
     background: cornsilk;
 }
 
-.number{
+.number {
     width: 75px;
     height: 75px;
     display: flex;
@@ -202,7 +201,7 @@ footer i {
     box-sizing: border-box;
     background-image: url(../img/cat.jpg);
     color: white;
-} 
+}
 
 .droppable {
     height: 75px;
@@ -255,16 +254,17 @@ table {
 
 .check-btn {
     background-color: #54bf6d;
-} 
+}
 
 /* ----------------- Animations ----------------- */
 
-@keyframes fadeInDown { 
-    0% {                
+@keyframes fadeInDown {
+    0% {
         opacity: 0;
         transform: translate3d(0px, -100%, 0px);
     }
-    100% {              
+
+    100% {
         opacity: 1;
         transform: none;
     }
@@ -274,21 +274,22 @@ table {
     0% {
         background-color: #fff;
     }
+
     100% {
-        background-color: rgba(0,0,0,0.4);
+        background-color: rgba(0, 0, 0, 0.4);
     }
 }
 
 /* ----------------- Media queries ----------------- */
 
 @media screen and (max-width: 1200px) {
-    .container{
+    .container {
         width: 75%;
     }
 }
 
 @media screen and (max-width: 900px) {
-    .container{
+    .container {
         width: 85%;
     }
 
