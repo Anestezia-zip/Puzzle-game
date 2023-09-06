@@ -196,20 +196,6 @@ $(".new-game").on("click", location.reload);
         });
     }
 
-// ---------------------------- Dropdown ----------------------------
-    function closeDropdowns() {
-        $(".dropdown-content").removeClass("show");
-    }
-
-    $(".dropbtn").click(function() {
-        $("#myDropdown").toggleClass("show");
-    });
-
-    $(document).click(function(event) {
-        if (!$(event.target).closest('.dropdown').length) {
-        closeDropdowns();
-        }
-    });
 
 };
 
