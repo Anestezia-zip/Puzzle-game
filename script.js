@@ -43,7 +43,9 @@ let onStartApp = function() {
 $('.check').on('click', promptForCheck)
 $('.close-btn').on('click', promptForClose)
 $('.check-btn').on('click', onCheckPuzzle)
-$(".new-game").on("click", location.reload);
+$(".new-game").on("click", () => {
+    location.reload
+});
 
 // ---------------------------- Functions ----------------------------
 
