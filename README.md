@@ -1,17 +1,17 @@
- ## Puzzle Haven <img src="img/logo.jpg" width="20" height="20" />
+ ## Puzzle Haven <img src="assets/img/logo.jpg" width="20" height="20" />
 
 Welcome to the Puzzle Haven Platform! There are millions of free Haven puzzles created by a large community. You can create, play, share puzzles and compete with other users.  
 
 The live link can be found here - [Puzzle Game Platform](https://anestezia-zip.github.io/Puzzle-game/)
 
-![Responsive Design](img/puzzle-am-i-responsive.jpg)
+![Responsive Design](assets/img/puzzle-am-i-responsive.jpg)
 
 ## Features 
 Puzzle Game is an engaging interactive experience that challenges players with logical puzzles based on drag-and-drop mechanics.
 
 - __Start, Check, New Game Buttons:__  
 The game provides players with the ability to initiate the game using the "Start" button, verify their solution with the "Check" button, and begin a new game session using the "New Game" button.
-![main page](img/readme-screenshot.jpg)
+![main page](assets/img/readme-screenshot.jpg)
 
 - __Interactive Puzzle Mechanic:__  
 Players can interact with the puzzles by dragging and dropping pieces from the first block to the empty block below, creating an immersive and enjoyable gameplay experience.  
@@ -55,11 +55,11 @@ It is important to close attention to user interactions to guarantee a user-frie
   - No errors were found when passing through the official [W3C CSS validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fanestezia-zip.github.io%2FPuzzle-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - Javascript
   - No errors were returned when passing through the official [JSHINT validator](https://jshint.com/)
-![jshint testing](img/jshint-testing.jpg)
+![jshint testing](assets/img/jshint-testing.jpg)
 
 - Accessibility
     - I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools  
-![lighthouse](img/puzzle-lighthouse-dekstop.jpg)
+![lighthouse](assets/img/puzzle-lighthouse-dekstop.jpg)
 
 ## Languages&Tools Used
 

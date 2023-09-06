@@ -153,7 +153,7 @@ footer i {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    background-image: url(./img/cat.jpg);
+    background-image: url(../img/cat.jpg);
     color: white;
 } 
 
