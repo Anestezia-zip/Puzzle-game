@@ -9,12 +9,21 @@ The live link can be found here - [Puzzle Game Platform](https://anestezia-zip.g
 ## Features 
 Puzzle Game is an engaging interactive experience that challenges players with logical puzzles based on drag-and-drop mechanics.
 
+### Header
+Clicking on the logo will take you to the main page. By clicking on the comments icon in the right corner, the application will take you to a page where you can leave feedback and express your own opinion, wishes and other comments regarding our website.
+![header  links](assets/img/header-links.jpg)
+
+### Main page
 - __Start, Check, New Game Buttons:__  
 The game provides players with the ability to initiate the game using the "Start" button, verify their solution with the "Check" button, and begin a new game session using the "New Game" button.
 ![main page](assets/img/readme-screenshot.jpg)
 
 - __Interactive Puzzle Mechanic:__  
 Players can interact with the puzzles by dragging and dropping pieces from the first block to the empty block below, creating an immersive and enjoyable gameplay experience.  
+
+### Feedback page
+The web application has a second page with a feedback form:
+![feedback page](assets/img/feedback-page.jpg)
 
 ## Future features
 ### Footer

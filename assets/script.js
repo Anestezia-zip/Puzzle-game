@@ -40,12 +40,12 @@ let onStartApp = function() {
  * Event listeners for the pop-up windows
  */
 
-$('.check').on('click', promptForCheck);
-$('.close-btn').on('click', promptForClose);
-$('.check-btn').on('click', onCheckPuzzle);
-$(".new-game").on("click", () => {
-    location.reload();
-});
+    $('.check').on('click', promptForCheck);
+    $('.close-btn').on('click', promptForClose);
+    $('.check-btn').on('click', onCheckPuzzle);
+    $(".new-game").on("click", () => {
+        location.reload();
+    });
 
 // ---------------------------- Main functions ----------------------------
 
