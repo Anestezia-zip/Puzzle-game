@@ -47,7 +47,7 @@ $(".new-game").on("click", () => {
     location.reload();
 });
 
-// ---------------------------- Functions ----------------------------
+// ---------------------------- Main functions ----------------------------
 
 /**
  * Function for dragging and dropping blocks
