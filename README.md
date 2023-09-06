@@ -17,19 +17,6 @@ The game provides players with the ability to initiate the game using the "Start
 Players can interact with the puzzles by dragging and dropping pieces from the first block to the empty block below, creating an immersive and enjoyable gameplay experience.  
 
 ## Future features
-### Header
-In the header, you will find four buttons that are planned to be implemented in the future, enhancing the user experience and providing a more comprehensive puzzle-solving adventure.  
-
-![buttons](img/header-btns.jpg)
-
-- **Puzzles button:**  
-The "Puzzles" button will grant users access to a diverse assortment of puzzle themes. Upon clicking, users will be directed to a page displaying a wide array of puzzles, each categorized by theme, difficulty level, and popularity. This feature will enable users to explore puzzles tailored to their preferences, making their puzzle-solving experience even more engaging and enjoyable.
-- **Levels button:**  
-Clicking the "Levels" button will lead users to a dedicated section where they can choose from various difficulty levels. This functionality aims to provide users with the opportunity to customize the challenge of their puzzles, catering to both beginners and experienced solvers.
-- **Settings button:**  
- The "Settings" option will empower users to personalize their puzzle environment. Users can adjust sound settings to their liking, enhancing their immersion in the puzzle-solving process. Additionally, a selection of page themes will be available, allowing users to visually tailor their experience to their preferences.
-- **Help button:**  
-The "Help" button will offer valuable resources for users seeking assistance. This section will feature an in-depth FAQ section, addressing common queries and providing prompt solutions. For more individualized support, users will have the option to connect with the support team, allowing for specific inquiries and feedback sharing, contributing to the continual enhancement of the platform.
 ### Footer
 There are 3 external links in the footer in the form of Instagram, Twitter, Telegram icons:
 

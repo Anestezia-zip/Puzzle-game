@@ -247,10 +247,6 @@ table {
     .logo-block h1 {
         display: none;
     }
-
-    .header {
-        justify-content: center;
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -260,10 +256,6 @@ table {
 
     .dropdown {
         display: inline-block;
-    }
-
-    nav {
-        display: none;
     }
 
     .container {
