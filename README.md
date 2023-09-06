@@ -67,8 +67,10 @@ It is important to close attention to user interactions to guarantee a user-frie
 ![jshint testing](assets/img/jshint-testing.jpg)
 
 - Accessibility
-    - I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools  
+    - I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools on dekstop devices: 
 ![lighthouse](assets/img/puzzle-lighthouse-dekstop.jpg)
+As well as on mobile devices:
+![lighthouse](assets/img/puzzle-lighthouse-mobile.jpg)
 
 ## Languages&Tools Used
 
