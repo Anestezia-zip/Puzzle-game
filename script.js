@@ -49,7 +49,9 @@ $(".new-game").on("click", () => {
 
 // ---------------------------- Functions ----------------------------
 
-    // Function for dragging and dropping blocks
+/**
+ * Function for dragging and dropping blocks
+ */
     let allowDragging = false;
     function Puzzle() {
         $('.number').draggable({
@@ -83,7 +85,9 @@ $(".new-game").on("click", () => {
             }
         });
 
-    // Added touch event processing separately
+        /**
+         * Added touch event processing separately
+         */
         $('.number').on('touchstart', function (event) {
             if (!allowDragging) {
                 return false;
@@ -120,7 +124,7 @@ $(".new-game").on("click", () => {
     function startTimer() {
         $('.start').prop("disabled", true).css("opacity", ".7");
         $('.check').prop("disabled", false).css("opacity", "1");
-        
+
         countdownInterval = setInterval(function() {
             if (countdownTime <= 0) {
                 clearInterval(countdownInterval);
@@ -143,16 +147,22 @@ $(".new-game").on("click", () => {
         Puzzle()
     });
 
-    // Function for shuffling picture positions
+/**
+ * Function for shuffling picture positions
+ * Here I go through each block in the first box and randomly set a background-position percentage for it
+ */
     function shufflePictures() {
         let arrRandom = ['0% 0%', '-100% 0%', '-200% 0%', '-300% 0%', '0% -100%', '-100% -100%', '-200% -100%', '-300% -100%', '0% -200%', '-100% -200%', '-200% -200%', '-300% -200%', '0% -300%', '-100% -300%', '-200% -300%', '-300% -300%'];
             arrRandom = arrRandom.sort(() => Math.random() - 0.5);
-            $('.number').each(function (index, element) {
+            $('.number').each(function (index) {
                 $(this).css('background-position', arrRandom[index]);
             });
     } 
 
-    // Function for checking the puzzle
+/**
+ * Function for checking the puzzle
+ * 
+ */
     let winnerImage = ['0% 0%', '-100% 0%', '-200% 0%', '-300% 0%', '0% -100%', '-100% -100%', '-200% -100%', '-300% -100%', '0% -200%', '-100% -200%', '-200% -200%', '-300% -200%', '0% -300%', '-100% -300%', '-200% -300%', '-300% -300%'];
     function checkPuzzle() {
         if ($('#gamefield .dropped-puzzle').length != 16) {
