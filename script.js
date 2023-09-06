@@ -112,10 +112,15 @@ $(".new-game").on("click", () => {
             
     }
 
-
+/**
+ * Function for timer
+ */
     let countdownTime = 120;
     let countdownInterval;
     function startTimer() {
+        $('.start').prop("disabled", true).css("opacity", ".7");
+        $('.check').prop("disabled", false).css("opacity", "1");
+        
         countdownInterval = setInterval(function() {
             if (countdownTime <= 0) {
                 clearInterval(countdownInterval);
@@ -123,13 +128,11 @@ $(".new-game").on("click", () => {
                 $(".start").prop("disabled", true).css("opacity", ".7");
                 $(".check").prop("disabled", true).css("opacity", ".7");
             } else {
+                countdownTime--;  
                 const minutes = Math.floor(countdownTime / 60);
                 const seconds = countdownTime % 60;
                 const formattedTime = (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
                 $(".timer-clock").text(formattedTime);
-                countdownTime--;
-                $('.start').prop("disabled", true).css("opacity", ".7");
-                $('.check').prop("disabled", false).css("opacity", "1");
             }
         }, 1000);
     }
