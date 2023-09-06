@@ -26,7 +26,7 @@ let onStartApp = function() {
             animation: 'none',
         });
         $('body').css('animation', 'none');
-    };
+    }
 /**
  * Сhecking for a well-folded puzzle
  */
@@ -35,16 +35,16 @@ let onStartApp = function() {
         clearInterval(countdownInterval);
         checkPuzzle();
         $('.start, .check').prop("disabled", true).css("opacity", "0.7");
-    };
+    }
 /**
  * Event listeners for the pop-up windows
  */
 
-$('.check').on('click', promptForCheck)
-$('.close-btn').on('click', promptForClose)
-$('.check-btn').on('click', onCheckPuzzle)
+$('.check').on('click', promptForCheck);
+$('.close-btn').on('click', promptForClose);
+$('.check-btn').on('click', onCheckPuzzle);
 $(".new-game").on("click", () => {
-    location.reload()
+    location.reload();
 });
 
 // ---------------------------- Functions ----------------------------
@@ -142,9 +142,9 @@ $(".new-game").on("click", () => {
     }
 
     $('.start').on('click', function() {
-        startTimer()
+        startTimer();
         allowDragging = true;
-        Puzzle()
+        Puzzle();
     });
 
 /**
@@ -215,6 +215,6 @@ $(".new-game").on("click", () => {
 };
 
 $(document).ready(() => {
-    onStartApp()
-})
+    onStartApp();
+});
 
