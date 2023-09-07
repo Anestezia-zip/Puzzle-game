@@ -97,12 +97,12 @@ let onStartApp = function() {
                 $(this).parent().removeClass('puzzle-present');
             }
             // Save the coordinates of the touch
-            let touch = event.originalEvent.touches[0] || event.originalEvent.changedTouches[0];
+            let touch = event.originalEvent.touches[0];
             $(this).data('touch-start-x', touch.pageX);
             $(this).data('touch-start-y', touch.pageY);
         }).on('touchmove', function (event) {
             event.preventDefault();
-            let touch = event.originalEvent.touches[0] || event.originalEvent.changedTouches[0];
+            let touch = event.originalEvent.touches[0];
             let startX = $(this).data('touch-start-x');
             let startY = $(this).data('touch-start-y');
             let offsetX = touch.pageX - startX;
