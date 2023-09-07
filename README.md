@@ -72,6 +72,15 @@ It is important to close attention to user interactions to guarantee a user-frie
 As well as on mobile devices:
 ![lighthouse](assets/img/puzzle-lighthouse-mobile.jpg)
 
+## Mobile Block Dragging Issue
+When using a mobile device and dragging blocks using 'touchstart' and 'touchmove' events, an issue arises where the blocks fail to snap into position in the second box. This bug is specific to the use of developer tools and switching to mobile emulation mode.  
+
+Developer Notes:  
+This bug seems to be associated with the event simulation behavior within developer tools and should not affect the actual operation of the website on real mobile devices.
+
+Solution:  
+This bug does not impact the website's functionality on real mobile devices and can be ignored if it only occurs within the developer tools. To verify performance on real devices, it's recommended to use actual mobile devices or online compatibility testing tools.
+
 ## Languages&Tools Used
 
 - HTML5
